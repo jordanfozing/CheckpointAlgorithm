@@ -1,0 +1,28 @@
+ALGORITHM phrase se terminant par un point
+VAR
+  mahmoud : CHAR;
+  conteur,vo : INTEGER := 0;
+  mot : INTEGER := 1;
+ 
+BEGIN
+    REPEAT
+        Write ("Donner un caractere");
+        Read (mahmoud);
+
+        conteur :=conteur +1;
+
+        IF (mahmoud ='a'  OR mahmoud ='e'  OR mahmoud ='u'  OR mahmoud ='i'  OR mahmoud = 'y' ) THEN
+            vo = vo +1;
+        END_IF
+        
+        IF (mahmoud = ' ') THEN
+            mot := mot + 1 ;
+        END_IF   
+        
+    UNTIL (mahmoud=".")
+
+    Write("Le nombre de caracter est" , conteur)
+    Write("Le nombre de voyel est", vo)
+    Write("Le nombre de mot", mot)
+
+END
